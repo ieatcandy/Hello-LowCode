@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  animation: bounce-body 1s forwards;
+}
+#root {
+  width: 100%;
+  height: 100%;
+}
+.app {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.content {
+  height: calc(100% - 52px);
+  display: flex;
+}
+.tab {
+  height: 48px;
+  margin-bottom: 1px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  animation: bounce-tab 0.3s ease-out;
+}
+.tab .high {
+  background-color: #f2f2f2;
+}
+.tab .ipad {
+  transform: scale(0.95) rotate(270deg);
+}
+.tab .cur-screen {
+  width: 80px;
+}
+.tab h4 {
+  margin-bottom: 0;
+  padding-left: 10px;
+}
+.tab ul {
+  margin-bottom: 0;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+}
+.tab ul li {
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-right: 20px;
+}
+.tab ul button {
+  margin-right: 10px;
+  border-radius: 3px;
+}
+@keyframes bounce-body {
+  0% {
+    background-color: #ffffff;
+  }
+  100% {
+    background-color: #d5d5d5;
+  }
+}
+@keyframes bounce-tab {
+  0% {
+    opacity: 0;
+    transform: translateY(-48px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
